@@ -3,6 +3,7 @@ package org.skypro.skyshop.service;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
+import org.skypro.skyshop.exception.NoSuchProductException;
 import org.skypro.skyshop.model.basket.BasketItem;
 import org.skypro.skyshop.model.basket.ProductBasket;
 import org.skypro.skyshop.model.basket.UserBasket;
@@ -22,7 +23,7 @@ public class BasketService {
 
     public void addItem(UUID id) {
         if (storageService.getProductById(id).isEmpty()) {
-            throw new IllegalArgumentException("Не найден ни один подходящий элемент");
+            throw new NoSuchProductException();
         }
         productBasket.addProduct(id);
     }
