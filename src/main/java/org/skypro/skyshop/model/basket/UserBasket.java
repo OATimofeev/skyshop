@@ -1,10 +1,12 @@
 package org.skypro.skyshop.model.basket;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 import java.util.List;
 
 @Getter
+@EqualsAndHashCode
 public class UserBasket {
 
     private final List<BasketItem> itemList;

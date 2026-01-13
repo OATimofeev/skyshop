@@ -1,5 +1,6 @@
 package org.skypro.skyshop.service;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.skypro.skyshop.model.article.Article;
 import org.skypro.skyshop.model.product.DiscountedProduct;

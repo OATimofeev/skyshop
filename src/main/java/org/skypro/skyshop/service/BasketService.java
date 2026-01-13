@@ -29,6 +29,8 @@ public class BasketService {
     }
 
     public UserBasket getUserBasket() {
+
+        Map<UUID, Integer> basket =   productBasket.getBasket();
         return new UserBasket(
                 productBasket.getBasket()
                         .entrySet()
